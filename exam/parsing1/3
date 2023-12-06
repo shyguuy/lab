@@ -1,0 +1,19 @@
+import re
+re.match()
+re.search()
+re.findall()
+re.split()
+re.sub()
+re.compile()
+\d — соответствует любой одной цифре и заменяет собой выражение [0-9];
+\D — исключает все цифры и заменяет [^0-9];
+\w — заменяет любую цифру, букву, а также знак нижнего подчёркивания;
+\W — любой символ кроме латиницы, цифр или нижнего подчёркивания;
+\s — соответствует любому пробельному символу;
+\S — описывает любой непробельный символ.
+result = re.findall(r'\w\w', 'AV is largest Analytics community of India')
+print result
+Результат:
+['AV', 'is', 'la', 'rg', 'es', 'An', 'al', 'yt', 'ic', 'co', 'mm', 'un', 'it', 'of', 'In', 'di']
+
+https://tproger.ru/translations/regular-expression-python
