@@ -1,1 +1,17 @@
+import requests
+from bs4 import BeautifulSoup as bs
 
+page = 1
+
+while True: 
+    r = requests.get("" + str(page))
+    html = bs(r.content, 'html.parser')
+    items = html.select(".item > .article-summary")
+
+    if (len(items)):
+        for el in items:
+            title = el.select('.caption > a')
+            print(title[0].text)
+            page += 1
+    else:
+        break
